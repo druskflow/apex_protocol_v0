@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 
 pragma solidity ^0.6.0;
 
@@ -23,7 +24,8 @@ contract SimpleStorage {
     // People public person = People({favoriteNumber: 2, name: "Patrick"}); - for a single person
     // create an array for multiple people
     People[] public people;
- 
+    // data steructure calle mapping, helps find someone with name only if you don't know the number
+    mapping(string => uint256) public nameToFavoriteNumber;
     
     function store(uint256 _favoriteNumber) public {
         favoriteNumber = _favoriteNumber;
@@ -44,6 +46,9 @@ contract SimpleStorage {
     // in storage the data will exists even after the function executes
     function addPerson(string memory _name, uint256 _favoriteNumber) public{
         people.push(People(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 
 }
+
+// Notes: All the solidity code here was compiled by the EVM(Ehereum Virtual Machine)
