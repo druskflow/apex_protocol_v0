@@ -15,6 +15,8 @@ Additionally, lesson 7 uses Chainlink VRF v1 instead of v2, [you can find the do
 
 Welcome to the repository for the Ultimate Solidity, Blockchain, and Smart Contract Project
 
+Built on the Apex Protocol
+
 # Table of Contents
 - [Table of Contents](#table-of-contents)
 - [Resources For This Course](#resources-for-this-course)
