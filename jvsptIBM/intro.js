@@ -26,3 +26,6 @@ var cost = 120;
 var cost = 120, profit = 77;*/}
 // if a variable is not declared explicitly using var then javascript will automatically treat it as a global variable
 // a variable must be identified with a unique name
+
+// numerical variable
+// the console.log function writes data to the web page
