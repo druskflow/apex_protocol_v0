@@ -1,0 +1,9 @@
+Solidity is an object oriented, high level langauge.
+Smart Contracts are programs which govern the behaviour of accounts within the Ethereum state.
+
+It is designed to target the Ethereum Virtual Machine(EVM). It influenced by C++, Python and Javascript
+
+It is statically typed, supports inheritance, libraries and complex user-defined types.
+
+Create contracts for uses such as voting, crowdfunding, blind auctions, and multi-signature wallets.
+
