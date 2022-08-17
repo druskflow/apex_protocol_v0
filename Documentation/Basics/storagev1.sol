@@ -3,19 +3,17 @@
 pragma solidity >=0.4.16 <0.9.0; //solidity version
 
 
-contract SimpleStorage {
-    uint storeData;
+contract SimpleStorage{
+    uint storedData;
 
-    function set(uint x) public {
-        storeData = x;
+    function set(uint x) public{
+        storedData = x;
+    }
+    function get() public view returns(uint){
+        return storedData;
     }
 
-    fucntion get() public view returns (uint) {
-        return storeData;
-    }
 }
-
-
 // first line is the source code licenced under the GPL version 3.0
 
 // A ctontract in the sense of solidity is a collection of code(its functions) and data(its state) that resdes at a specific ddress 
