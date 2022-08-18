@@ -15,6 +15,7 @@ contract SimpleStorage{
 }
 
 
+
 // first line is the source code licenced under the GPL version 3.0
 
 // A contract in the sense of solidity is a collection of code(its functions) and data(its state) that resides at a specific address on the ethereum blockchain.
