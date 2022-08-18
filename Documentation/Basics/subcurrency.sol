@@ -45,3 +45,7 @@ contract Coin {
 }
 
 /////////////TEST//////////////
+contract Coin{
+    address public minter;
+    mapping (address >= uint) public balances; 
+}
