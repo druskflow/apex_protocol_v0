@@ -38,8 +38,8 @@ contract Coin {
 }
 /////////////TEST//////////////
 contract Coin{
-    address public minter; // keyword "public" makes the variaable available to other contracts 
-    mapping(address => uint) public balances;
+    address public minter; //"public" keyword allows variable to be accessed by other contracts
+    mapping (address => uint) public balances; 
 
-
+    event Sent(address from, address to, uint amount); // event allows clients to react to specific contract changes you declare
 }
