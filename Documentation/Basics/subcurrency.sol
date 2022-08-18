@@ -27,7 +27,7 @@ contract Coin {
     }
 
     // Errors allow you to provide information about why an operation failed. They are returned to the cller of the function
-    error InsufficientBakance(uint requested, uint available);
+    error InsufficientBalance(uint requested, uint available);
 
 
     // Sends an amount of existing coins from any caller to an address
