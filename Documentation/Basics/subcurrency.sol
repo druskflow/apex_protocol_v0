@@ -8,30 +8,23 @@ pragma solidity ^0.8.4;
 
 
 contract Coin {
-    // the keyword "public" makes variables accessible from other contracts
-    address public minter;
+    address public minter;// the keyword "public" makes variables accessible from other contracts
     mapping (address => uint) public balances;
 
-    // events allow clients to react to specific contract changes you declare
-    event Sent(address from, address to, uint amount);
+    event Sent(address from, address to, uint amount); // events allow clients to react to specific contract changes you declare
 
-    // Constructor code is only run when the contract is created
-    constructor(){
+    constructor(){    // Constructor code is only run when the contract is created
         minter = msg.sender;
     }
 
-    // Sends an amount of newly created coins to an address can only be called by the contact creator
-    function mint(address receiver, uint amount) public {
+    function mint(address receiver, uint amount) public { // Sends an amount of newly created coins to an address can only be called by the contact creator
         require(msg.sender == minter);
         balances[receiver] += amount;
     }
 
-    // Errors allow you to provide information about why an operation failed. They are returned to the cller of the function
-    error InsufficientBalance(uint requested, uint available);
+    error InsufficientBalance(uint requested, uint available); // Errors allow you to provide information about why an operation failed. They are returned to the cller of the function
 
-
-    // Sends an amount of existing coins from any caller to an address
-    function send(address receiver, uint amount) public {
+    function send(address receiver, uint amount) public { // Sends an amount of existing coins from any caller to an address
         if (amount > balances[msg.sender])
             revert InsufficientBalance({
                 requested: amount,
@@ -43,9 +36,10 @@ contract Coin {
         emit Sent(msg.sender, receiver, amount);
     }
 }
-
 /////////////TEST//////////////
 contract Coin{
-    address public minter;
-    mapping (address >= uint) public balances; 
+    address public minter; // keyword "public" makes the variaable available to other contracts 
+    mapping(address => uint) public balances;
+
+
 }
