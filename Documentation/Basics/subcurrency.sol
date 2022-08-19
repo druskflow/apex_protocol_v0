@@ -37,19 +37,17 @@ contract Coin {
     }
 }
 /////////////TEST//////////////
-contract Coin{
-    address public minter; //"public" keyword allows variable to be accessed by other contracts
-    mapping (address => uint) public balances; 
 
-    event Sent(address from, address to, uint amount); // event allows clients to react to specific contract changes you declare
+// this contract introduces new concepts.
+// The line address public minter; declares a state variable of type address. 
+// The address does not allow any arithmetic. It is suitable for storing addresses of contracts,
+// or a hash of the public half f a keypair belonging to external accounts.
 
-    constructor(){
-        minter = msg.sender;
-    }
+// The key word public automatically generates a function that allows you to access the current
+// valueof the state variable from outside of the contract.(ignore extrnal and view for now).
 
-    function mint(address receiver, uint amount) public {
-        require(msg.sender == minter);
-        balances[receiver] += amount;
-    }
+// function minter() external view returns (address) {return minter; }
+// The above function coul ve added, but you would have a function and state vaariable with the same name.
 
-}
+// mapping (address => uint) public balances;   this line creates a public state variable, but it is a more complex datatype
+// The mapping type maps addresses to unsigned integers
