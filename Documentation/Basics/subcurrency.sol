@@ -42,4 +42,14 @@ contract Coin{
     mapping (address => uint) public balances; 
 
     event Sent(address from, address to, uint amount); // event allows clients to react to specific contract changes you declare
+
+    constructor(){
+        minter = msg.sender;
+    }
+
+    function mint(address receiver, uint amount) public {
+        require(msg.sender == minter);
+        balances[receiver] += amount;
+    }
+
 }
