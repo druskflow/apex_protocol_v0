@@ -53,5 +53,5 @@ contract Coin{
         balances[receiver] += amount;
     }
 
-    error 
+    error InsufficientBalance(uint requested, uint available);
 }
