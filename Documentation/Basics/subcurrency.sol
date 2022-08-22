@@ -38,16 +38,3 @@ contract Coin {
 }
 /////////////TEST//////////////
 
-// this contract introduces new concepts.
-// The line address public minter; declares a state variable of type address. 
-// The address does not allow any arithmetic. It is suitable for storing addresses of contracts,
-// or a hash of the public half f a keypair belonging to external accounts.
-
-// The key word public automatically generates a function that allows you to access the current
-// valueof the state variable from outside of the contract.(ignore extrnal and view for now).
-
-// function minter() external view returns (address) {return minter; }
-// The above function coul ve added, but you would have a function and state vaariable with the same name.
-
-// mapping (address => uint) public balances;   this line creates a public state variable, but it is a more complex datatype
-// The mapping type maps addresses to unsigned integers
