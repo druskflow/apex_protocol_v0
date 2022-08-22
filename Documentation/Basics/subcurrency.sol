@@ -46,4 +46,4 @@ contract Coin {
 // The keywod public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. Without this 
 // key word, other conntracts have no way to access the variable.
 
-// 
+//  
