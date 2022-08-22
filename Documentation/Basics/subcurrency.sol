@@ -44,6 +44,8 @@ contract Coin {
 // It is suitale for storing addresses of contracts, or hash of the public half of a keypair belongin to external accounts.
 
 // The keywod public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. Without this 
-// key word, other conntracts have no way to access the variable.
+// key word, other conntracts have no way to access the variable. 
 
-//  
+// function minter() external view returns (address) { return minter; }
+// The function above can be added but you would have a function and state variabel with the same name. You do not need to do this, the compiler figures it out for youy.
+
