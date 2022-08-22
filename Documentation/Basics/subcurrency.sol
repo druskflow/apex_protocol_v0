@@ -47,5 +47,9 @@ contract Coin {
 // key word, other conntracts have no way to access the variable. 
 
 // function minter() external view returns (address) { return minter; }
-// The function above can be added but you would have a function and state variabel with the same name. You do not need to do this, the compiler figures it out for youy.
+// The function above can be added but you would have a function and state variabel with the same name. You do not need to do this, the compiler figures it out for you.
 
+// The next line, mapping(address => uint) public balances; also creates a public state variable, but it ia a more complex datatype. The mapping type maps addresses to unsigned integeers.
+
+// Mappings can be seen as hash tables which are virtually initialised sich that every possible key exists from the start and is mapped to a value whose byte-representation is all zeros.
+// It is neither possible to obtain a list of all keys of a mapping, not a list of all values.
