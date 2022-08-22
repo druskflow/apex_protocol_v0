@@ -43,4 +43,10 @@ contract Coin{
     mapping (address => uint) public balances;
 
     event Sent (address from, address to, uint amount);
+
+    constructor(){
+        minter = msg.sender;
+    }
+
+    
 }
