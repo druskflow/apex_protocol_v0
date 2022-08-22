@@ -48,5 +48,7 @@ contract Coin{
         minter = msg.sender;
     }
 
-    
+    function mint(address receiver, uint amount) public {
+        
+    }
 }
