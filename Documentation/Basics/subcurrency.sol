@@ -38,3 +38,12 @@ contract Coin {
 }
 /////////////TEST//////////////
 
+// This contract introduces some new conceptsl
+
+// The line address public minter; declares a state variable of type address. The address type is a 160-bit value that does not allow any arithmetic operations.
+// It is suitale for storing addresses of contracts, or hash of the public half of a keypair belongin to external accounts.
+
+// The keywod public automatically generates a function that allows you to access the current value of the state variable from outside of the contract. Without this 
+// key word, other conntracts have no way to access the variable.
+
+// 
