@@ -49,6 +49,9 @@ contract Coin{
     }
 
     function mint(address receiver, uint amount) public {
-        
+        require(msg.sender == minter);
+        balances[receiver] += amount;
     }
+
+    error 
 }
