@@ -66,3 +66,13 @@ contract Coin {
 
 // To listen for this event, you could use the following JavaScript code, which uses web3.js to create the Coin contract object, and any user interface calls the automatically generated
 // balances function from above:
+Coin.Sent.watch({}, '', function(error, result) {
+    if (!error) {
+        console.log("Coin transfer: " + result.args.amount +
+            " coins were sent from " + result.args.from + 
+            " to " + result.args.to + ".");
+        console.log("Balances now:\n" + 
+            "Sender: " + Coin.balances.call(result.args.from) + 
+            "Receiver: " + Coin.balances.call(result.args.to));
+    }
+})
