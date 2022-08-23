@@ -76,3 +76,10 @@ Coin.Sent.watch({}, '', function(error, result) {
             "Receiver: " + Coin.balances.call(result.args.to));
     }
 })
+// The constractor is a special function that is executed during the creation of the contract and cannot be called afterwards. In this case, it permanently storees the aaddress of the 
+// person creating the contract. The msg variable(together with tx and block) is a special global variable that contains properties which allow ccess to the blockchain. 
+// msg.sender is always the address where the current (external) function call came from.
+
+// The functions that make up the contract, and that users and contracts can call are mint and send.
+
+// The mint function sends an amount of newly created coins to another address. The require function call defines conditions that reverts all changes of not met.
