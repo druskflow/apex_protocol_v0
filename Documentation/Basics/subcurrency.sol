@@ -53,3 +53,16 @@ contract Coin {
 
 // Mappings can be seen as hash tables which are virtually initialised sich that every possible key exists from the start and is mapped to a value whose byte-representation is all zeros.
 // It is neither possible to obtain a list of all keys of a mapping, not a list of all values.
+
+// The getter function created by the public keyword is more complex in the case of a mapping. It looks like the following:
+/*function balances(address account) external view returns (uint) {
+     return balances[account];
+ }*/
+// You can use this function to query the balance of a single account
+
+// The line event Sent(address from, address to, uint amount); declares an "event", which is emitted in the last line of the function send. Ethereum clients such as web applications
+//  can listen for these events emmitted on the blockchain without much cost. As soon as it is emitted, the listener receives the arguments from, to and amount, which makes it possible
+// to track transactions.
+
+// To listen for this event, you could use the following JavaScript code, which uses web3.js to create the Coin contract object, and any user interface calls the automatically generated
+// balances function from above:
